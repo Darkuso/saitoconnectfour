@@ -58,7 +58,7 @@ class Connect4 {
     $board.on('click', '.col.empty', function() {
       if (that.isGameOver) return;
       const col = $(this).data('col');
-      const $lastEmptyCell = findLastEmptyCell(col);
+      const $lastEmptyCell = findLastEmptyCell(col); 
       $lastEmptyCell.removeClass(`empty next-${that.player}`);
       $lastEmptyCell.addClass(that.player);
       $lastEmptyCell.data('player', that.player);
